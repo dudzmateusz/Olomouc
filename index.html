@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ołomuniec: Perła Moraw | Przewodnik Turystyczny</title>
-  <meta name="description" content="Ołomuniec to jedno z najpiękniejszych czeskich miast, często nazywane &#039;drugą Pragą&#039;, choć znacznie bardziej kameralne i mniej zatłoczone. Ta wycieczka łączy intensywne zwiedzanie zabytkowej starówki z wizytami w okolicznych zamkach i urokliwych zakątkach regionu Haná.">
+  <title>Ołomuniec: Perła Moraw w Trzy Dni | Przewodnik Turystyczny</title>
+  <meta name="description" content="Ołomuniec to miasto, które zachwyca gęstością zabytków, często nazywane mniejszą Pragą bez tłumów. Ten plan wycieczki zapewnia pełne wykorzystanie czasu, łącząc zwiedzanie historycznego centrum z wycieczkami do pobliskich pereł architektury i natury w promieniu 75 km.">
   <meta name="theme-color" content="#1e293b">
   <style>
     :root {
@@ -251,6 +251,28 @@
       margin-bottom: 16px;
     }
 
+    .day-schedule-note {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .day-walking-note {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #064e3b;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
     .day-route-bar {
       border-top: 1px solid var(--border);
       padding-top: 16px;
@@ -326,8 +348,12 @@
       background: rgba(37, 99, 235, 0.9);
     }
 
+    .badge-walk {
+      background: rgba(5, 150, 105, 0.95);
+    }
+
     .badge-real {
-      background: rgba(5, 150, 105, 0.9);
+      background: rgba(15, 23, 42, 0.85);
     }
 
     .attr-body {
@@ -356,6 +382,38 @@
       font-weight: 800;
       font-size: 0.95rem;
       flex-shrink: 0;
+    }
+
+    .attr-number.number-walk {
+      background: #059669;
+      color: #ffffff;
+    }
+
+    .attr-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .tag-walk {
+      background: #d1fae5;
+      color: #065f46;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #a7f3d0;
+    }
+
+    .tag-transit {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
     }
 
     .attr-title {
@@ -405,11 +463,69 @@
       color: #92400e;
       border-radius: 8px;
       padding: 10px 14px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       display: flex;
       gap: 10px;
       align-items: flex-start;
       font-size: 0.85rem;
+    }
+
+    .attr-walking {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+    }
+
+    .walking-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #065f46;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+
+    .walking-summary {
+      color: #047857;
+      margin: 0 0 8px 0;
+      line-height: 1.45;
+    }
+
+    .walking-sights {
+      border-top: 1px solid #d1fae5;
+      padding-top: 8px;
+      margin-top: 6px;
+    }
+
+    .walking-sights-title {
+      font-weight: 700;
+      color: #064e3b;
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .walking-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .walking-list li {
+      background: #ffffff;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
 
     .attr-actions {
@@ -605,8 +721,8 @@
         <span>🗺️</span>
         <span>Spersonalizowany Przewodnik Turystyczny</span>
       </div>
-      <h1 class="hero-title">Ołomuniec: Perła Moraw</h1>
-      <p class="hero-tagline">Trzydniowa intensywna podróż do serca Moraw pełna barokowej architektury i historii.</p>
+      <h1 class="hero-title">Ołomuniec: Perła Moraw w Trzy Dni</h1>
+      <p class="hero-tagline">Trzydniowa intensywna podróż przez barokowe zabytki i historyczne serce Moraw.</p>
 
       <div class="stats-bar">
         <div class="stat-item">
@@ -619,11 +735,11 @@
         </div>
         <div class="stat-item">
           <span class="stat-label">Zasięg z noclegu</span>
-          <span class="stat-value">🚗 maks. 70 km</span>
+          <span class="stat-value">🚗 maks. 75 km</span>
         </div>
         <div class="stat-item">
           <span class="stat-label">Łącznie atrakcji</span>
-          <span class="stat-value">⭐ 4 miejsc</span>
+          <span class="stat-value">⭐ 7 miejsc</span>
         </div>
       </div>
 
@@ -652,7 +768,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 14px; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
           <div>
             <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #93c5fd; font-weight: 700;">Harmonogram podróży i dojazdu</span>
-            <h3 style="color: #ffffff; font-size: 1.25rem; margin-top: 2px;">🚗 Alwernia ➔ Olomouc</h3>
+            <h3 style="color: #ffffff; font-size: 1.25rem; margin-top: 2px;">🚗 Grojec Alwernia ➔ Olomouc</h3>
           </div>
           <div style="display: flex; gap: 10px; font-size: 0.85rem;">
             <span style="background: rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px;">📏 ~120 km</span>
@@ -664,7 +780,7 @@
           <div style="background: rgba(255,255,255,0.08); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
             <div style="font-weight: 700; font-size: 0.85rem; color: #93c5fd; margin-bottom: 4px;">🕒 Dzień 1: Wyjazd i Przyjazd</div>
             <p style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.5;">
-              Wyjazd z <strong>Alwernia</strong> o <strong>08:30</strong> ➔
+              Wyjazd z <strong>Grojec Alwernia</strong> o <strong>08:30</strong> ➔
               Planowany przyjazd: <strong style="color: #6ee7b7;">~10:16</strong>.
             </p>
             <span style="display: inline-block; margin-top: 6px; font-size: 0.75rem; background: rgba(16,185,129,0.2); color: #a7f3d0; padding: 2px 8px; border-radius: 4px;">
@@ -685,8 +801,8 @@
         </div>
 
         <div style="margin-top: 14px; text-align: right;">
-                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Alwernia&amp;destination=Olomouc" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; font-size: 0.82rem; padding: 8px 14px;">
-                  Nawiguj dojazd w Google Maps (Alwernia ➔ Olomouc)
+                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Grojec%20Alwernia&amp;destination=Olomouc" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; font-size: 0.82rem; padding: 8px 14px;">
+                  Nawiguj dojazd w Google Maps (Grojec Alwernia ➔ Olomouc)
                 </a>
               </div>
       </section>
@@ -694,7 +810,7 @@
 
       <section class="card summary-card">
         <h3>📖 O Twojej wycieczce</h3>
-        <p>Ołomuniec to jedno z najpiękniejszych czeskich miast, często nazywane &#039;drugą Pragą&#039;, choć znacznie bardziej kameralne i mniej zatłoczone. Ta wycieczka łączy intensywne zwiedzanie zabytkowej starówki z wizytami w okolicznych zamkach i urokliwych zakątkach regionu Haná.</p>
+        <p>Ołomuniec to miasto, które zachwyca gęstością zabytków, często nazywane mniejszą Pragą bez tłumów. Ten plan wycieczki zapewnia pełne wykorzystanie czasu, łącząc zwiedzanie historycznego centrum z wycieczkami do pobliskich pereł architektury i natury w promieniu 75 km.</p>
       </section>
 
       
@@ -704,20 +820,27 @@
             <span class="day-pill">Dzień 1</span>
             <span class="day-distance">Maks. zasięg dnia: ~2 km</span>
           </div>
-          <h3 class="day-theme">Odkrywanie barokowego serca Ołomuńca</h3>
-          <p class="day-summary">Popołudniowe wprowadzenie do miasta, spacer po najważniejszych placach i punktach orientacyjnych.</p>
+          <h3 class="day-theme">Serce Baroku i Historyczna Starówka</h3>
+          <p class="day-summary">Poznawanie architektonicznego dziedzictwa Ołomuńca, ze szczególnym uwzględnieniem wpisanego na listę UNESCO słupa Trójcy Przenajświętszej.</p>
 
           
             <div class="day-schedule-note">
               <strong>🕒 Harmonogram czasowy:</strong>
-              <span>Dojazd z Alwernia (wyjazd 08:30 ➔ przyjazd ok. 10:16). Zwiedzanie rozpoczyna się od 11:01 po zameldowaniu.</span>
+              <span>Dojazd z Grojec Alwernia (wyjazd 08:30 ➔ przyjazd ok. 10:16). Zwiedzanie rozpoczyna się od 11:01 po zameldowaniu.</span>
+            </div>
+            
+
+          
+            <div class="day-walking-note">
+              <strong>🚶 Piesze zwiedzanie i parkowanie:</strong>
+              <span>Parkowanie najlepiej zaplanować na parkingu &#039;P+R Neředín&#039; lub &#039;Parking Galerie Šantovka&#039; i przesiąść się na tramwaj lub odbyć krótki spacer do centrum.</span>
             </div>
             
 
           
             <div class="day-route-bar">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc&amp;waypoints=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Radnice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%20583%2F1%2C%20Olomouc&amp;waypoints=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc|Sloup%20Nejsv%C4%9Bt%C4%9Bj%C5%A1%C3%AD%20Trojice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-route"
@@ -734,50 +857,52 @@
         <article class="attr-card" id="attr-attr-1-1">
           <div class="attr-media">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/8d/2016_Kolumna_Tr%C3%B3jcy_%C5%9Awi%C4%99tej_w_Bystrzycy_K%C5%82odzkiej_01.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" 
-              alt="Kolumna Trójcy Przenajświętszej" 
+              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/RynekG%C3%B3rny-POL%2C_Wieliczka.JPG/3840px-RynekG%C3%B3rny-POL%2C_Wieliczka.JPG?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail" 
+              alt="Rynek Górny (Horní náměstí)" 
               loading="lazy"
               referrerpolicy="no-referrer"
               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
             />
             <div class="attr-badges">
-              <span class="badge badge-time">🕒 12:00 - 13:00</span>
-              <span class="badge badge-distance">🚗 0.5 km od bazy</span>
-              <span class="badge badge-duration">⏱️ 1 godz.</span>
+              <span class="badge badge-time">🕒 11:30 - 13:00</span>
+              <span class="badge badge-distance">🚗 10 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
               <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
             </div>
           </div>
           <div class="attr-body">
             <div class="attr-header">
-              <span class="attr-number">#1</span>
+              <span class="attr-number ">#1</span>
               <div>
-                <h4 class="attr-title">Kolumna Trójcy Przenajświętszej</h4>
-                <p class="attr-query">📍 Horní náměstí, 779 00 Olomouc</p>
+                
+                  <div class="attr-tag-row">
+                    
+                    <span class="tag-transit">Dojazd własny po zameldowaniu</span>
+                  </div>
+                <h4 class="attr-title">Rynek Górny (Horní náměstí)</h4>
+                <p class="attr-query">📍 Horní náměstí, Olomouc</p>
               </div>
             </div>
             
-            <p class="attr-desc">Monumentalna barokowa kolumna wpisana na listę UNESCO, symbol potęgi i wiary miasta. Jest to jeden z najbardziej imponujących zabytków tego typu w Europie Środkowej.</p>
+            <p class="attr-desc">Główny plac miasta, otoczony zabytkowymi kamienicami, będący centrum życia towarzyskiego.</p>
 
             
-              <div class="attr-highlights">
-                <strong>Co warto zobaczyć:</strong>
-                <ul>
-                  <li>Bogate zdobienia rzeźbiarskie</li><li>Kaplica wewnątrz kolumny</li><li>Wpis na listę UNESCO</li>
-                </ul>
-              </div>
 
             
-              <div class="attr-tips">
-                <span class="tip-icon">💡</span>
-                <div>
-                  <strong>Wskazówka:</strong>
-                  <span>Najlepiej oglądać z różnych stron placu Horní náměstí.</span>
+
+            
+              <div class="attr-walking">
+                <div class="walking-badge">
+                  <span>🚶</span>
+                  <strong>Piesze zwiedzanie w okolicy (zostaw auto i zobacz pieszo):</strong>
                 </div>
+                <p class="walking-summary">Centralny punkt wycieczki, od którego rozpoczynamy piesze zwiedzanie zabytków UNESCO w promieniu 500 metrów.</p>
+                
               </div>
 
             <div class="attr-actions">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;destination=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-primary"
@@ -787,7 +912,7 @@
                 Nawiguj w Google Maps
               </a>
               <a 
-                href="https://www.google.com/search?tbm=isch&amp;q=Kolumna%20Tr%C3%B3jcy%20Przenaj%C5%9Bwi%C4%99tszej%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/search?tbm=isch&amp;q=Rynek%20G%C3%B3rny%20(Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD)%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -797,7 +922,7 @@
                 Grafika Google
               </a>
               <a 
-                href="https://www.google.com/maps/search/?api=1&amp;query=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -814,50 +939,58 @@
         <article class="attr-card" id="attr-attr-1-2">
           <div class="attr-media">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Praga_0947_globus_belarusi-2.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
-              alt="Katedra św. Wacława" 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8d/2016_Kolumna_Tr%C3%B3jcy_%C5%9Awi%C4%99tej_w_Bystrzycy_K%C5%82odzkiej_01.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" 
+              alt="Kolumna Trójcy Przenajświętszej" 
               loading="lazy"
               referrerpolicy="no-referrer"
               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
             />
             <div class="attr-badges">
-              <span class="badge badge-time">🕒 14:00 - 15:30</span>
-              <span class="badge badge-distance">🚗 1.2 km od bazy</span>
-              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
+              <span class="badge badge-time">🕒 Punkt 2</span>
+              <span class="badge badge-walk">🚶 Spacer pieszy</span>
+              <span class="badge badge-duration">⏱️ 30 min</span>
               <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
             </div>
           </div>
           <div class="attr-body">
             <div class="attr-header">
-              <span class="attr-number">#2</span>
+              <span class="attr-number number-walk">#2</span>
               <div>
-                <h4 class="attr-title">Katedra św. Wacława</h4>
-                <p class="attr-query">📍 Václavské nám. 9, 779 00 Olomouc</p>
+                
+                  <div class="attr-tag-row">
+                    <span class="tag-walk">🚶 Zabytek w zasięgu spaceru</span>
+                    <span class="tag-transit">🚶 Spacer pieszy 50 m od punktu Rynek Górny</span>
+                  </div>
+                <h4 class="attr-title">Kolumna Trójcy Przenajświętszej</h4>
+                <p class="attr-query">📍 Sloup Nejsvětější Trojice, Horní náměstí, Olomouc</p>
               </div>
             </div>
             
-            <p class="attr-desc">Imponująca neogotycka świątynia z wysoką wieżą, położona na terenie zamku w Ołomuńcu. Jej historia sięga XII wieku i jest nierozerwalnie związana z czeskimi władcami.</p>
+            <p class="attr-desc">Monumentalna barokowa kolumna wpisana na listę UNESCO, symbol potęgi religijnej miasta.</p>
 
             
               <div class="attr-highlights">
                 <strong>Co warto zobaczyć:</strong>
                 <ul>
-                  <li>Najwyższa wieża kościelna na Morawach</li><li>Skarbiec katedralny</li><li>Grobowce biskupów</li>
+                  <li>Barokowe rzeźby</li><li>Kaplica wewnątrz słupa</li><li>Skala monumentu</li>
                 </ul>
               </div>
 
             
-              <div class="attr-tips">
-                <span class="tip-icon">💡</span>
-                <div>
-                  <strong>Wskazówka:</strong>
-                  <span>Wstęp do katedry jest bezpłatny, płatne jest wejście do skarbca.</span>
+
+            
+              <div class="attr-walking">
+                <div class="walking-badge">
+                  <span>🚶</span>
+                  <strong>Piesze zwiedzanie w okolicy (zostaw auto i zobacz pieszo):</strong>
                 </div>
+                <p class="walking-summary">Zwiedzanie okolicznych kamienic mieszczańskich w trakcie podziwiania słupa.</p>
+                
               </div>
 
             <div class="attr-actions">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;destination=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Sloup%20Nejsv%C4%9Bt%C4%9Bj%C5%A1%C3%AD%20Trojice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-primary"
@@ -867,7 +1000,7 @@
                 Nawiguj w Google Maps
               </a>
               <a 
-                href="https://www.google.com/search?tbm=isch&amp;q=Katedra%20%C5%9Bw.%20Wac%C5%82awa%20V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/search?tbm=isch&amp;q=Kolumna%20Tr%C3%B3jcy%20Przenaj%C5%9Bwi%C4%99tszej%20Sloup%20Nejsv%C4%9Bt%C4%9Bj%C5%A1%C3%AD%20Trojice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -877,7 +1010,87 @@
                 Grafika Google
               </a>
               <a 
-                href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Sloup%20Nejsv%C4%9Bt%C4%9Bj%C5%A1%C3%AD%20Trojice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+
+        <article class="attr-card" id="attr-attr-1-3">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Collage_Bologna.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Ratusz Miejski i Zegar Astronomiczny" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 Punkt 3</span>
+              <span class="badge badge-walk">🚶 Spacer pieszy</span>
+              <span class="badge badge-duration">⏱️ 1 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number number-walk">#3</span>
+              <div>
+                
+                  <div class="attr-tag-row">
+                    <span class="tag-walk">🚶 Zabytek w zasięgu spaceru</span>
+                    <span class="tag-transit">🚶 Spacer pieszy 100 m od punktu Kolumna Trójcy Przenajświętszej</span>
+                  </div>
+                <h4 class="attr-title">Ratusz Miejski i Zegar Astronomiczny</h4>
+                <p class="attr-query">📍 Radnice, Horní náměstí 583/1, Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Imponujący budynek ratusza z unikalnym socrealistycznym zegarem astronomicznym.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Widok z wieży ratuszowej</li><li>Ciekawostka historyczna zegara</li><li>Gotyckie wnętrza</li>
+                </ul>
+              </div>
+
+            
+
+            
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Radnice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%20583%2F1%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Ratusz%20Miejski%20i%20Zegar%20Astronomiczny%20Radnice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%20583%2F1%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Radnice%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%20583%2F1%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -897,12 +1110,12 @@
           <div class="food-icon">🍽️</div>
           <div class="food-content">
             <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
-            <h4 class="food-title">Restaurace Drápal</h4>
+            <h4 class="food-title">Moravská restaurace</h4>
             <p class="food-dish"><strong>Warto spróbować:</strong> Smažený sýr z hranolky</p>
-            <p class="food-desc">Tradycyjna czeska kuchnia w samym centrum miasta w historycznych wnętrzach.</p>
+            <p class="food-desc">Klasyczna kuchnia czeska w samym centrum.</p>
           </div>
           <a 
-            href="https://www.google.com/maps/search/?api=1&amp;query=Restaurace%20Dr%C3%A1pal%2C%20Olomouc" 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Moravsk%C3%A1%20restaurace%2C%20Ostru%C5%BEnick%C3%A1%20291%2F1%2C%20Olomouc" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn btn-outline"
@@ -918,22 +1131,29 @@
         <div class="day-header">
           <div class="day-meta">
             <span class="day-pill">Dzień 2</span>
-            <span class="day-distance">Maks. zasięg dnia: ~70 km</span>
+            <span class="day-distance">Maks. zasięg dnia: ~5 km</span>
           </div>
-          <h3 class="day-theme">Zamek Bouzov i natura regionu</h3>
-          <p class="day-summary">Wyjazd poza miasto do jednego z najbardziej malowniczych zamków w Czechach, znanego z wielu filmów.</p>
+          <h3 class="day-theme">Królewski Ołomuniec i Oazy Zieleni</h3>
+          <p class="day-summary">Zwiedzanie katedry św. Wacława oraz relaks w zabytkowych ogrodach miejskich.</p>
 
           
             <div class="day-schedule-note">
               <strong>🕒 Harmonogram czasowy:</strong>
-              <span>Dzień poświęcony na wycieczkę zamkową w bliskim sąsiedztwie Ołomuńca.</span>
+              <span>Dzień intensywnego zwiedzania obiektów sakralnych i muzealnych.</span>
+            </div>
+            
+
+          
+            <div class="day-walking-note">
+              <strong>🚶 Piesze zwiedzanie i parkowanie:</strong>
+              <span>Samochód warto zostawić na parkingu przy ulicy Bezručovy sady, skąd wszędzie jest blisko pieszo.</span>
             </div>
             
 
           
             <div class="day-route-bar">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Bouzov%208%2C%20783%2025%20Bouzov" 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Arcibiskupsk%C3%BD%20pal%C3%A1c%2C%20Wurmova%20563%2F9%2C%20Olomouc&amp;waypoints=V%C3%A1clavsk%C3%A9%20n%C3%A1m%C4%9Bst%C3%AD%201%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-route"
@@ -950,50 +1170,52 @@
         <article class="attr-card" id="attr-attr-2-1">
           <div class="attr-media">
             <img 
-              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Bouzov_hrad_-_Burg_Busau.jpg/3840px-Bouzov_hrad_-_Burg_Busau.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail" 
-              alt="Zamek Bouzov" 
+              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Praga_0947_globus_belarusi-2.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Katedra św. Wacława" 
               loading="lazy"
               referrerpolicy="no-referrer"
               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
             />
             <div class="attr-badges">
-              <span class="badge badge-time">🕒 10:00 - 13:00</span>
-              <span class="badge badge-distance">🚗 35 km od bazy</span>
-              <span class="badge badge-duration">⏱️ 3 godz.</span>
+              <span class="badge badge-time">🕒 09:00 - 11:00</span>
+              <span class="badge badge-distance">🚗 1.5 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
               <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
             </div>
           </div>
           <div class="attr-body">
             <div class="attr-header">
-              <span class="attr-number">#1</span>
+              <span class="attr-number ">#1</span>
               <div>
-                <h4 class="attr-title">Zamek Bouzov</h4>
-                <p class="attr-query">📍 Bouzov 8, 783 25 Bouzov</p>
+                
+                  <div class="attr-tag-row">
+                    
+                    <span class="tag-transit">🚗 Przejazd autem 1.5 km (5 min)</span>
+                  </div>
+                <h4 class="attr-title">Katedra św. Wacława</h4>
+                <p class="attr-query">📍 Václavské náměstí 1, Olomouc</p>
               </div>
             </div>
             
-            <p class="attr-desc">Bajkowy zamek o romantycznej architekturze, który wygląda jak z powieści rycerskiej. Został gruntownie przebudowany na przełomie XIX i XX wieku w duchu historyzmu.</p>
+            <p class="attr-desc">Gotycka katedra z neogotycką fasadą, serce duchowe Ołomuńca.</p>
 
             
-              <div class="attr-highlights">
-                <strong>Co warto zobaczyć:</strong>
-                <ul>
-                  <li>Zabytkowe wnętrza</li><li>Most zwodzony</li><li>Wieża widokowa</li>
-                </ul>
-              </div>
 
             
-              <div class="attr-tips">
-                <span class="tip-icon">💡</span>
-                <div>
-                  <strong>Wskazówka:</strong>
-                  <span>Wymagana rezerwacja biletów online w sezonie turystycznym.</span>
+
+            
+              <div class="attr-walking">
+                <div class="walking-badge">
+                  <span>🚶</span>
+                  <strong>Piesze zwiedzanie w okolicy (zostaw auto i zobacz pieszo):</strong>
                 </div>
+                <p class="walking-summary">Po zaparkowaniu w okolicy dzielnicy katedralnej zwiedzamy kompleks wzgórza zamkowego pieszo.</p>
+                
               </div>
 
             <div class="attr-actions">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;destination=Bouzov%208%2C%20783%2025%20Bouzov" 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=V%C3%A1clavsk%C3%A9%20n%C3%A1m%C4%9Bst%C3%AD%201%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-primary"
@@ -1003,7 +1225,7 @@
                 Nawiguj w Google Maps
               </a>
               <a 
-                href="https://www.google.com/search?tbm=isch&amp;q=Zamek%20Bouzov%20Bouzov%208%2C%20783%2025%20Bouzov" 
+                href="https://www.google.com/search?tbm=isch&amp;q=Katedra%20%C5%9Bw.%20Wac%C5%82awa%20V%C3%A1clavsk%C3%A9%20n%C3%A1m%C4%9Bst%C3%AD%201%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -1013,7 +1235,87 @@
                 Grafika Google
               </a>
               <a 
-                href="https://www.google.com/maps/search/?api=1&amp;query=Bouzov%208%2C%20783%2025%20Bouzov" 
+                href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9%20n%C3%A1m%C4%9Bst%C3%AD%201%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+
+        <article class="attr-card" id="attr-attr-2-2">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/54/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_073.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Pałac Arcybiskupi" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 Punkt 2</span>
+              <span class="badge badge-walk">🚶 Spacer pieszy</span>
+              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number number-walk">#2</span>
+              <div>
+                
+                  <div class="attr-tag-row">
+                    <span class="tag-walk">🚶 Zabytek w zasięgu spaceru</span>
+                    <span class="tag-transit">🚶 Spacer pieszy 300 m od Katedry św. Wacława</span>
+                  </div>
+                <h4 class="attr-title">Pałac Arcybiskupi</h4>
+                <p class="attr-query">📍 Arcibiskupský palác, Wurmova 563/9, Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Siedziba biskupów ołomunieckich z wspaniale zdobionymi wnętrzami.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Galeria obrazów</li><li>Historyczne sale ceremonialne</li>
+                </ul>
+              </div>
+
+            
+
+            
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Arcibiskupsk%C3%BD%20pal%C3%A1c%2C%20Wurmova%20563%2F9%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Pa%C5%82ac%20Arcybiskupi%20Arcibiskupsk%C3%BD%20pal%C3%A1c%2C%20Wurmova%20563%2F9%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Arcibiskupsk%C3%BD%20pal%C3%A1c%2C%20Wurmova%20563%2F9%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -1033,12 +1335,12 @@
           <div class="food-icon">🍽️</div>
           <div class="food-content">
             <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
-            <h4 class="food-title">Zámecká restaurace Bouzov</h4>
-            <p class="food-dish"><strong>Warto spróbować:</strong> Gulasz wołowy z knedlikami</p>
-            <p class="food-desc">Restauracja znajdująca się w bezpośrednim sąsiedztwie zamku.</p>
+            <h4 class="food-title">Cafe Restaurant Caesar</h4>
+            <p class="food-dish"><strong>Warto spróbować:</strong> Svíčková na smetaně</p>
+            <p class="food-desc">Eleganckie miejsce z widokiem na rynek.</p>
           </div>
           <a 
-            href="https://www.google.com/maps/search/?api=1&amp;query=Z%C3%A1meck%C3%A1%20restaurace%20Bouzov" 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Restaurant%20Caesar%2C%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%20583%2C%20Olomouc" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn btn-outline"
@@ -1054,22 +1356,29 @@
         <div class="day-header">
           <div class="day-meta">
             <span class="day-pill">Dzień 3</span>
-            <span class="day-distance">Maks. zasięg dnia: ~5 km</span>
+            <span class="day-distance">Maks. zasięg dnia: ~10 km</span>
           </div>
-          <h3 class="day-theme">Ogrody i lokalne smaki</h3>
-          <p class="day-summary">Relaksujący poranek w ogrodach botanicznych przed powrotem do Polski.</p>
+          <h3 class="day-theme">Twierdza i Powrót</h3>
+          <p class="day-summary">Ostatnie chwile w Ołomuńcu przed wyjazdem w drogę powrotną.</p>
 
           
             <div class="day-schedule-note">
               <strong>🕒 Harmonogram czasowy:</strong>
-              <span>Program zwiedzania do 15:00. O 16:00 wyjazd w drogę powrotną do Alwernia (planowany powrót do domu ok. 17:46).</span>
+              <span>Program zwiedzania do 15:00. O 16:00 wyjazd w drogę powrotną do Grojec Alwernia (planowany powrót do domu ok. 17:46).</span>
+            </div>
+            
+
+          
+            <div class="day-walking-note">
+              <strong>🚶 Piesze zwiedzanie i parkowanie:</strong>
+              <span>Parkowanie w centrum do 15:00, następnie szybki wyjazd w kierunku autostrady.</span>
             </div>
             
 
           
             <div class="day-route-bar">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Muzeum%20um%C4%9Bn%C3%AD%20Olomouc%2C%20Denisova%2047%2C%20Olomouc&amp;waypoints=Bastion%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-route"
@@ -1086,50 +1395,52 @@
         <article class="attr-card" id="attr-attr-3-1">
           <div class="attr-media">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/5/50/Morskie_oko_o_swicie.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
-              alt="Ogród Botaniczny Ołomuniec" 
+              src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Olomouc_map_1757.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" 
+              alt="Twierdza Ołomuniec (Bastion)" 
               loading="lazy"
               referrerpolicy="no-referrer"
               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
             />
             <div class="attr-badges">
-              <span class="badge badge-time">🕒 10:00 - 12:00</span>
+              <span class="badge badge-time">🕒 09:00 - 12:00</span>
               <span class="badge badge-distance">🚗 2 km od bazy</span>
-              <span class="badge badge-duration">⏱️ 2 godz.</span>
+              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
               <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
             </div>
           </div>
           <div class="attr-body">
             <div class="attr-header">
-              <span class="attr-number">#1</span>
+              <span class="attr-number ">#1</span>
               <div>
-                <h4 class="attr-title">Ogród Botaniczny Ołomuniec</h4>
-                <p class="attr-query">📍 Bezručovy sady, 779 00 Olomouc</p>
+                
+                  <div class="attr-tag-row">
+                    
+                    <span class="tag-transit">🚗 Przejazd autem 2 km</span>
+                  </div>
+                <h4 class="attr-title">Twierdza Ołomuniec (Bastion)</h4>
+                <p class="attr-query">📍 Bastion, Olomouc</p>
               </div>
             </div>
             
-            <p class="attr-desc">Przepiękne tereny zielone oferujące spokój i możliwość podziwiania egzotycznych roślin. Idealne miejsce na spacer przed długą drogą powrotną.</p>
+            <p class="attr-desc">Pozostałości potężnych fortyfikacji miejskich, które chroniły miasto przez wieki.</p>
 
             
-              <div class="attr-highlights">
-                <strong>Co warto zobaczyć:</strong>
-                <ul>
-                  <li>Palmiarnia</li><li>Ogród japoński</li><li>Różnorodność roślin</li>
-                </ul>
-              </div>
 
             
-              <div class="attr-tips">
-                <span class="tip-icon">💡</span>
-                <div>
-                  <strong>Wskazówka:</strong>
-                  <span>Wstęp płatny, sprawdzić godziny otwarcia w zależności od sezonu.</span>
+
+            
+              <div class="attr-walking">
+                <div class="walking-badge">
+                  <span>🚶</span>
+                  <strong>Piesze zwiedzanie w okolicy (zostaw auto i zobacz pieszo):</strong>
                 </div>
+                <p class="walking-summary">Spacer wzdłuż murów miejskich i terenów zielonych wokół dawnej twierdzy.</p>
+                
               </div>
 
             <div class="attr-actions">
               <a 
-                href="https://www.google.com/maps/dir/?api=1&amp;destination=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Bastion%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-primary"
@@ -1139,7 +1450,7 @@
                 Nawiguj w Google Maps
               </a>
               <a 
-                href="https://www.google.com/search?tbm=isch&amp;q=Ogr%C3%B3d%20Botaniczny%20O%C5%82omuniec%20Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/search?tbm=isch&amp;q=Twierdza%20O%C5%82omuniec%20(Bastion)%20Bastion%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -1149,7 +1460,81 @@
                 Grafika Google
               </a>
               <a 
-                href="https://www.google.com/maps/search/?api=1&amp;query=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Bastion%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+
+        <article class="attr-card" id="attr-attr-3-2">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Tampere_Montage_1.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Muzeum Sztuki Ołomuniec" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 Punkt 2</span>
+              <span class="badge badge-walk">🚶 Spacer pieszy</span>
+              <span class="badge badge-duration">⏱️ 2 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number number-walk">#2</span>
+              <div>
+                
+                  <div class="attr-tag-row">
+                    <span class="tag-walk">🚶 Zabytek w zasięgu spaceru</span>
+                    <span class="tag-transit">🚶 Spacer pieszy 500 m od punktu Twierdza Ołomuniec</span>
+                  </div>
+                <h4 class="attr-title">Muzeum Sztuki Ołomuniec</h4>
+                <p class="attr-query">📍 Muzeum umění Olomouc, Denisova 47, Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Nowoczesne muzeum w zabytkowych wnętrzach skupiające się na sztuce europejskiej.</p>
+
+            
+
+            
+
+            
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Muzeum%20um%C4%9Bn%C3%AD%20Olomouc%2C%20Denisova%2047%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Muzeum%20Sztuki%20O%C5%82omuniec%20Muzeum%20um%C4%9Bn%C3%AD%20Olomouc%2C%20Denisova%2047%2C%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Muzeum%20um%C4%9Bn%C3%AD%20Olomouc%2C%20Denisova%2047%2C%20Olomouc" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="btn btn-secondary"
@@ -1169,12 +1554,12 @@
           <div class="food-icon">🍽️</div>
           <div class="food-content">
             <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
-            <h4 class="food-title">Kavárna Café La Fée</h4>
-            <p class="food-dish"><strong>Warto spróbować:</strong> Kawa i domowe ciasto</p>
-            <p class="food-desc">Przytulna kawiarnia idealna na lekkie pożegnalne śniadanie.</p>
+            <h4 class="food-title">Long Story Short Eatery</h4>
+            <p class="food-dish"><strong>Warto spróbować:</strong> Sezonowe danie szefa kuchni</p>
+            <p class="food-desc">Nowoczesna kuchnia w industrialnym wnętrzu.</p>
           </div>
           <a 
-            href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9%20La%20F%C3%A9e%2C%20Olomouc" 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Long%20Story%20Short%20Eatery%2C%20Ko%C5%BEelu%C5%BEsk%C3%A1%20945%2F31%2C%20Olomouc" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn btn-outline"
@@ -1190,7 +1575,7 @@
       <section class="card advice-card">
         <h3>💡 Praktyczne wskazówki przed wyruszeniem</h3>
         <ul class="advice-list">
-          <li>Większość centrów miast jest strefą płatnego parkowania, korzystaj z parkingów wielopoziomowych w Olomoucu.</li><li>Warto kupić &#039;Olomouc Region Card&#039;, która oferuje darmowe wstępy do wielu atrakcji i zniżki na transport.</li><li>Czeska kuchnia jest sycąca; zawsze rezerwuj stolik w popularnych restauracjach z wyprzedzeniem.</li>
+          <li>Większość centrów miast w Czechach posiada płatne strefy parkowania, najlepiej szukać parkingów wielopoziomowych w obrzeżach starówki.</li><li>Warto kupić &#039;Olomouc Region Card&#039;, która oferuje darmowe wejścia do wielu muzeów i zniżki na transport.</li><li>Czeskie restauracje często serwują dania dnia (denní menu) w porze lunchu, co jest najkorzystniejszą opcją finansową.</li>
         </ul>
       </section>
     
