@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ołomuniec: Perła Moraw | Przewodnik Turystyczny</title>
+  <meta name="description" content="Ołomuniec to jedno z najpiękniejszych czeskich miast, często nazywane &#039;drugą Pragą&#039;, choć znacznie bardziej kameralne i mniej zatłoczone. Ta wycieczka łączy intensywne zwiedzanie zabytkowej starówki z wizytami w okolicznych zamkach i urokliwych zakątkach regionu Haná.">
+  <meta name="theme-color" content="#1e293b">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --accent: #0284c7;
+      --success: #16a34a;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 48px 24px;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 750px;
+      margin-bottom: 24px;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .nav-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      overflow-x: auto;
+    }
+
+    .day-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .tab-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .main-content {
+      padding: 32px 0;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 32px;
+    }
+
+    .summary-card {
+      border-left: 5px solid var(--primary);
+    }
+
+    .summary-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .day-section {
+      margin-bottom: 56px;
+      scroll-margin-top: 80px;
+    }
+
+    .day-header {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .day-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .day-schedule-note {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: #1e40af;
+      line-height: 1.5;
+    }
+
+    .day-schedule-note strong {
+      color: #1e3a8a;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .day-pill {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .day-distance {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .day-theme {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .day-summary {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .day-route-bar {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .attractions-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 860px) {
+      .attractions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .attr-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    @media (min-width: 768px) {
+      .attr-card {
+        grid-template-columns: 360px 1fr;
+      }
+    }
+
+    .attr-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .attr-media {
+      position: relative;
+      background: #e2e8f0;
+      min-height: 240px;
+    }
+
+    .attr-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .attr-badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-distance {
+      background: rgba(37, 99, 235, 0.9);
+    }
+
+    .badge-real {
+      background: rgba(5, 150, 105, 0.9);
+    }
+
+    .attr-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .attr-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .attr-number {
+      background: var(--primary-light);
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .attr-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .attr-query {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .attr-desc {
+      color: #334155;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .attr-highlights {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+    }
+
+    .attr-highlights strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+
+    .attr-highlights ul {
+      padding-left: 18px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .attr-tips {
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      color: #92400e;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+    }
+
+    .attr-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .btn-route {
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #0f172a;
+      width: 100%;
+    }
+
+    .btn-route:hover {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .food-card {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .food-card {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .food-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+
+    .food-content {
+      flex: 1;
+    }
+
+    .food-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #ea580c;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .food-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #9a3412;
+      margin: 2px 0;
+    }
+
+    .food-dish {
+      font-size: 0.9rem;
+      color: #7c2d12;
+    }
+
+    .food-desc {
+      font-size: 0.85rem;
+      color: #9a3412;
+      margin-top: 4px;
+    }
+
+    .advice-card {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+
+    .advice-card h3 {
+      color: #166534;
+      margin-bottom: 12px;
+    }
+
+    .advice-list {
+      padding-left: 20px;
+      color: #15803d;
+    }
+
+    .advice-list li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* Print styles for easy saving as PDF */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+        padding-bottom: 0;
+      }
+      .nav-bar, .hero-actions, .btn-primary, .btn-secondary, .btn-route {
+        display: none !important;
+      }
+      .attr-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      header.hero {
+        background: none;
+        color: #000;
+        padding: 0 0 20px 0;
+        border-bottom: 2px solid #000;
+      }
+      .hero-title {
+        color: #000;
+      }
+      .stats-bar {
+        background: none;
+        border: 1px solid #ccc;
+        color: #000;
+      }
+      .stat-value {
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <span>🗺️</span>
+        <span>Spersonalizowany Przewodnik Turystyczny</span>
+      </div>
+      <h1 class="hero-title">Ołomuniec: Perła Moraw</h1>
+      <p class="hero-tagline">Trzydniowa intensywna podróż do serca Moraw pełna barokowej architektury i historii.</p>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-label">Baza noclegowa</span>
+          <span class="stat-value">📍 Olomouc</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Czas trwania</span>
+          <span class="stat-value">📅 3 dni</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Zasięg z noclegu</span>
+          <span class="stat-value">🚗 maks. 70 km</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Łącznie atrakcji</span>
+          <span class="stat-value">⭐ 4 miejsc</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button onclick="window.print()" class="btn btn-secondary" style="color: #0f172a; font-weight: 600;">
+          🖨️ Drukuj / Zapisz jako PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="container">
+      <div class="day-tabs" id="dayTabs">
+        <button class="tab-btn active" onclick="filterDay('all', this)">Wszystkie dni</button>
+        <button class="tab-btn" onclick="filterDay(1, this)">Dzień 1</button><button class="tab-btn" onclick="filterDay(2, this)">Dzień 2</button><button class="tab-btn" onclick="filterDay(3, this)">Dzień 3</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      
+      
+      <section class="card transit-card" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: #ffffff; margin-bottom: 24px; border: 1px solid #3b82f6;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 14px; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #93c5fd; font-weight: 700;">Harmonogram podróży i dojazdu</span>
+            <h3 style="color: #ffffff; font-size: 1.25rem; margin-top: 2px;">🚗 Alwernia ➔ Olomouc</h3>
+          </div>
+          <div style="display: flex; gap: 10px; font-size: 0.85rem;">
+            <span style="background: rgba(255,255,255,0.12); padding: 4px 10px; border-radius: 6px;">📏 ~120 km</span>
+            <span style="background: rgba(59,130,246,0.3); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: #bfdbfe;">⏱️ Czas: ok. 1 godz. 46 min</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+          <div style="background: rgba(255,255,255,0.08); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #93c5fd; margin-bottom: 4px;">🕒 Dzień 1: Wyjazd i Przyjazd</div>
+            <p style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.5;">
+              Wyjazd z <strong>Alwernia</strong> o <strong>08:30</strong> ➔
+              Planowany przyjazd: <strong style="color: #6ee7b7;">~10:16</strong>.
+            </p>
+            <span style="display: inline-block; margin-top: 6px; font-size: 0.75rem; background: rgba(16,185,129,0.2); color: #a7f3d0; padding: 2px 8px; border-radius: 4px;">
+              ✓ Atrakcje 1. dnia startują po przyjeździe
+            </span>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.08); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #c4b5fd; margin-bottom: 4px;">🏠 Dzień 3: Powrót do domu</div>
+            <p style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.5;">
+              Wyjazd powrotny o <strong>16:00</strong> ➔
+              Planowany powrót do domu: <strong style="color: #c4b5fd;">~17:46</strong>.
+            </p>
+            <span style="display: inline-block; margin-top: 6px; font-size: 0.75rem; background: rgba(139,92,246,0.2); color: #ddd6fe; padding: 2px 8px; border-radius: 4px;">
+              ✓ Program ostatniego dnia kończy się przed wyjazdem
+            </span>
+          </div>
+        </div>
+
+        <div style="margin-top: 14px; text-align: right;">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Alwernia&amp;destination=Olomouc" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; font-size: 0.82rem; padding: 8px 14px;">
+                  Nawiguj dojazd w Google Maps (Alwernia ➔ Olomouc)
+                </a>
+              </div>
+      </section>
+    
+
+      <section class="card summary-card">
+        <h3>📖 O Twojej wycieczce</h3>
+        <p>Ołomuniec to jedno z najpiękniejszych czeskich miast, często nazywane &#039;drugą Pragą&#039;, choć znacznie bardziej kameralne i mniej zatłoczone. Ta wycieczka łączy intensywne zwiedzanie zabytkowej starówki z wizytami w okolicznych zamkach i urokliwych zakątkach regionu Haná.</p>
+      </section>
+
+      
+      <section class="day-section" id="day-1" data-day="1">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-pill">Dzień 1</span>
+            <span class="day-distance">Maks. zasięg dnia: ~2 km</span>
+          </div>
+          <h3 class="day-theme">Odkrywanie barokowego serca Ołomuńca</h3>
+          <p class="day-summary">Popołudniowe wprowadzenie do miasta, spacer po najważniejszych placach i punktach orientacyjnych.</p>
+
+          
+            <div class="day-schedule-note">
+              <strong>🕒 Harmonogram czasowy:</strong>
+              <span>Dojazd z Alwernia (wyjazd 08:30 ➔ przyjazd ok. 10:16). Zwiedzanie rozpoczyna się od 11:01 po zameldowaniu.</span>
+            </div>
+            
+
+          
+            <div class="day-route-bar">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc&amp;waypoints=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-route"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                Otwórz całą trasę Dnia 1 w Google Maps
+              </a>
+            </div>
+            
+        </div>
+
+        <div class="attractions-grid">
+          
+        <article class="attr-card" id="attr-attr-1-1">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8d/2016_Kolumna_Tr%C3%B3jcy_%C5%9Awi%C4%99tej_w_Bystrzycy_K%C5%82odzkiej_01.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled" 
+              alt="Kolumna Trójcy Przenajświętszej" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 12:00 - 13:00</span>
+              <span class="badge badge-distance">🚗 0.5 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 1 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number">#1</span>
+              <div>
+                <h4 class="attr-title">Kolumna Trójcy Przenajświętszej</h4>
+                <p class="attr-query">📍 Horní náměstí, 779 00 Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Monumentalna barokowa kolumna wpisana na listę UNESCO, symbol potęgi i wiary miasta. Jest to jeden z najbardziej imponujących zabytków tego typu w Europie Środkowej.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Bogate zdobienia rzeźbiarskie</li><li>Kaplica wewnątrz kolumny</li><li>Wpis na listę UNESCO</li>
+                </ul>
+              </div>
+
+            
+              <div class="attr-tips">
+                <span class="tip-icon">💡</span>
+                <div>
+                  <strong>Wskazówka:</strong>
+                  <span>Najlepiej oglądać z różnych stron placu Horní náměstí.</span>
+                </div>
+              </div>
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Kolumna%20Tr%C3%B3jcy%20Przenaj%C5%9Bwi%C4%99tszej%20Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Horn%C3%AD%20n%C3%A1m%C4%9Bst%C3%AD%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+
+        <article class="attr-card" id="attr-attr-1-2">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Praga_0947_globus_belarusi-2.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Katedra św. Wacława" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 14:00 - 15:30</span>
+              <span class="badge badge-distance">🚗 1.2 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 1.5 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number">#2</span>
+              <div>
+                <h4 class="attr-title">Katedra św. Wacława</h4>
+                <p class="attr-query">📍 Václavské nám. 9, 779 00 Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Imponująca neogotycka świątynia z wysoką wieżą, położona na terenie zamku w Ołomuńcu. Jej historia sięga XII wieku i jest nierozerwalnie związana z czeskimi władcami.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Najwyższa wieża kościelna na Morawach</li><li>Skarbiec katedralny</li><li>Grobowce biskupów</li>
+                </ul>
+              </div>
+
+            
+              <div class="attr-tips">
+                <span class="tip-icon">💡</span>
+                <div>
+                  <strong>Wskazówka:</strong>
+                  <span>Wstęp do katedry jest bezpłatny, płatne jest wejście do skarbca.</span>
+                </div>
+              </div>
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Katedra%20%C5%9Bw.%20Wac%C5%82awa%20V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A1clavsk%C3%A9%20n%C3%A1m.%209%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+        </div>
+
+        
+        <div class="food-card">
+          <div class="food-icon">🍽️</div>
+          <div class="food-content">
+            <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
+            <h4 class="food-title">Restaurace Drápal</h4>
+            <p class="food-dish"><strong>Warto spróbować:</strong> Smažený sýr z hranolky</p>
+            <p class="food-desc">Tradycyjna czeska kuchnia w samym centrum miasta w historycznych wnętrzach.</p>
+          </div>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Restaurace%20Dr%C3%A1pal%2C%20Olomouc" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn btn-outline"
+          >
+            Nawiguj do restauracji
+          </a>
+        </div>
+      
+      </section>
+      
+
+      <section class="day-section" id="day-2" data-day="2">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-pill">Dzień 2</span>
+            <span class="day-distance">Maks. zasięg dnia: ~70 km</span>
+          </div>
+          <h3 class="day-theme">Zamek Bouzov i natura regionu</h3>
+          <p class="day-summary">Wyjazd poza miasto do jednego z najbardziej malowniczych zamków w Czechach, znanego z wielu filmów.</p>
+
+          
+            <div class="day-schedule-note">
+              <strong>🕒 Harmonogram czasowy:</strong>
+              <span>Dzień poświęcony na wycieczkę zamkową w bliskim sąsiedztwie Ołomuńca.</span>
+            </div>
+            
+
+          
+            <div class="day-route-bar">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Bouzov%208%2C%20783%2025%20Bouzov" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-route"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                Otwórz całą trasę Dnia 2 w Google Maps
+              </a>
+            </div>
+            
+        </div>
+
+        <div class="attractions-grid">
+          
+        <article class="attr-card" id="attr-attr-2-1">
+          <div class="attr-media">
+            <img 
+              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Bouzov_hrad_-_Burg_Busau.jpg/3840px-Bouzov_hrad_-_Burg_Busau.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail" 
+              alt="Zamek Bouzov" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 10:00 - 13:00</span>
+              <span class="badge badge-distance">🚗 35 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 3 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number">#1</span>
+              <div>
+                <h4 class="attr-title">Zamek Bouzov</h4>
+                <p class="attr-query">📍 Bouzov 8, 783 25 Bouzov</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Bajkowy zamek o romantycznej architekturze, który wygląda jak z powieści rycerskiej. Został gruntownie przebudowany na przełomie XIX i XX wieku w duchu historyzmu.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Zabytkowe wnętrza</li><li>Most zwodzony</li><li>Wieża widokowa</li>
+                </ul>
+              </div>
+
+            
+              <div class="attr-tips">
+                <span class="tip-icon">💡</span>
+                <div>
+                  <strong>Wskazówka:</strong>
+                  <span>Wymagana rezerwacja biletów online w sezonie turystycznym.</span>
+                </div>
+              </div>
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Bouzov%208%2C%20783%2025%20Bouzov" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Zamek%20Bouzov%20Bouzov%208%2C%20783%2025%20Bouzov" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Bouzov%208%2C%20783%2025%20Bouzov" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+        </div>
+
+        
+        <div class="food-card">
+          <div class="food-icon">🍽️</div>
+          <div class="food-content">
+            <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
+            <h4 class="food-title">Zámecká restaurace Bouzov</h4>
+            <p class="food-dish"><strong>Warto spróbować:</strong> Gulasz wołowy z knedlikami</p>
+            <p class="food-desc">Restauracja znajdująca się w bezpośrednim sąsiedztwie zamku.</p>
+          </div>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Z%C3%A1meck%C3%A1%20restaurace%20Bouzov" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn btn-outline"
+          >
+            Nawiguj do restauracji
+          </a>
+        </div>
+      
+      </section>
+      
+
+      <section class="day-section" id="day-3" data-day="3">
+        <div class="day-header">
+          <div class="day-meta">
+            <span class="day-pill">Dzień 3</span>
+            <span class="day-distance">Maks. zasięg dnia: ~5 km</span>
+          </div>
+          <h3 class="day-theme">Ogrody i lokalne smaki</h3>
+          <p class="day-summary">Relaksujący poranek w ogrodach botanicznych przed powrotem do Polski.</p>
+
+          
+            <div class="day-schedule-note">
+              <strong>🕒 Harmonogram czasowy:</strong>
+              <span>Program zwiedzania do 15:00. O 16:00 wyjazd w drogę powrotną do Alwernia (planowany powrót do domu ok. 17:46).</span>
+            </div>
+            
+
+          
+            <div class="day-route-bar">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=Olomouc&amp;destination=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-route"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                Otwórz całą trasę Dnia 3 w Google Maps
+              </a>
+            </div>
+            
+        </div>
+
+        <div class="attractions-grid">
+          
+        <article class="attr-card" id="attr-attr-3-1">
+          <div class="attr-media">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/50/Morskie_oko_o_swicie.jpg?utm_source=pl.wikipedia.org&amp;utm_campaign=api&amp;utm_content=original" 
+              alt="Ogród Botaniczny Ołomuniec" 
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80';"
+            />
+            <div class="attr-badges">
+              <span class="badge badge-time">🕒 10:00 - 12:00</span>
+              <span class="badge badge-distance">🚗 2 km od bazy</span>
+              <span class="badge badge-duration">⏱️ 2 godz.</span>
+              <span class="badge badge-real">📸 Prawdziwe zdjęcie</span>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-header">
+              <span class="attr-number">#1</span>
+              <div>
+                <h4 class="attr-title">Ogród Botaniczny Ołomuniec</h4>
+                <p class="attr-query">📍 Bezručovy sady, 779 00 Olomouc</p>
+              </div>
+            </div>
+            
+            <p class="attr-desc">Przepiękne tereny zielone oferujące spokój i możliwość podziwiania egzotycznych roślin. Idealne miejsce na spacer przed długą drogą powrotną.</p>
+
+            
+              <div class="attr-highlights">
+                <strong>Co warto zobaczyć:</strong>
+                <ul>
+                  <li>Palmiarnia</li><li>Ogród japoński</li><li>Różnorodność roślin</li>
+                </ul>
+              </div>
+
+            
+              <div class="attr-tips">
+                <span class="tip-icon">💡</span>
+                <div>
+                  <strong>Wskazówka:</strong>
+                  <span>Wstęp płatny, sprawdzić godziny otwarcia w zależności od sezonu.</span>
+                </div>
+              </div>
+
+            <div class="attr-actions">
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary"
+                title="Rozpocznij nawigację w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Nawiguj w Google Maps
+              </a>
+              <a 
+                href="https://www.google.com/search?tbm=isch&amp;q=Ogr%C3%B3d%20Botaniczny%20O%C5%82omuniec%20Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz zdjęcia tego obiektu w Grafice Google"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                Grafika Google
+              </a>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&amp;query=Bezru%C4%8Dovy%20sady%2C%20779%2000%20Olomouc" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-secondary"
+                title="Zobacz punkt i opinie w Google Maps"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Zobacz na mapie
+              </a>
+            </div>
+          </div>
+        </article>
+      
+        </div>
+
+        
+        <div class="food-card">
+          <div class="food-icon">🍽️</div>
+          <div class="food-content">
+            <span class="food-tag">Polecane miejsce na posiłek / przerwę</span>
+            <h4 class="food-title">Kavárna Café La Fée</h4>
+            <p class="food-dish"><strong>Warto spróbować:</strong> Kawa i domowe ciasto</p>
+            <p class="food-desc">Przytulna kawiarnia idealna na lekkie pożegnalne śniadanie.</p>
+          </div>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9%20La%20F%C3%A9e%2C%20Olomouc" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn btn-outline"
+          >
+            Nawiguj do restauracji
+          </a>
+        </div>
+      
+      </section>
+      
+
+      
+      <section class="card advice-card">
+        <h3>💡 Praktyczne wskazówki przed wyruszeniem</h3>
+        <ul class="advice-list">
+          <li>Większość centrów miast jest strefą płatnego parkowania, korzystaj z parkingów wielopoziomowych w Olomoucu.</li><li>Warto kupić &#039;Olomouc Region Card&#039;, która oferuje darmowe wstępy do wielu atrakcji i zniżki na transport.</li><li>Czeska kuchnia jest sycąca; zawsze rezerwuj stolik w popularnych restauracjach z wyprzedzeniem.</li>
+        </ul>
+      </section>
+    
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Wygenerowano za pomocą Inteligentnego Przewodnika Turystycznego</p>
+      <p style="margin-top: 6px; font-size: 0.8rem;">Kliknięcie „Nawiguj w Google Maps” otwiera nawigację GPS bezpośrednio do wybranej atrakcji.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterDay(dayNumber, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const sections = document.querySelectorAll('.day-section');
+      sections.forEach(sec => {
+        if (dayNumber === 'all') {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = (sec.getAttribute('data-day') == dayNumber) ? 'block' : 'none';
+        }
+      });
+
+      if (dayNumber !== 'all') {
+        const target = document.getElementById('day-' + dayNumber);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  </script>
+</body>
+</html>
